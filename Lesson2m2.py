@@ -1,5 +1,6 @@
 #principles of OOP -  Inheritage, Polymorphism. Git - commits, creating repository, git push
 # directory = fold
+# repository = project
 
 # Principles of OOP
 # 1. Inheritage
@@ -56,8 +57,9 @@ print(isinstance(truck22, Truck))
 print(isinstance(car2, Car))
 print(isinstance(truck22, Car))
 
+"""Polymorphism"""
 vehicles = [car2, truck22, bus_42]           # polymorphism example (also in lesson's record)
 for v in vehicles:
     v.drive_to('Karakol')
-    # v.drive_to(destination='Karakol')
+    # v.drive_to(destination='Karakol')      # not recommended way
 
