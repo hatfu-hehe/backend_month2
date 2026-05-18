@@ -44,20 +44,20 @@ class Car:
         self.__max_speed = new_speed
 
 
-car1 = Car('black', 'lixiang')
-car2 = Car('white', 'ford')
-
-print(car1.color, car1.model)
-car1.drive_to('Kant')
-print('Fined:', 'yes' if car1._fined else 'no')
-car1._calculated_fuel()
-car1.__max_speed = 294    # non-existent attribute. It may be similar to the one in Car (illusion)
-# print(car2.__max_speed)
-print(f"Car1's speed: {car1.get_max_speed()}")
-car1.set_max_speed(79)
-print(f"Car1's speed: {car1.get_max_speed()}")
-print(f"Car1's speed: {car1.max_speed}")     # was called with @property
-car1.max_speed = 365
-print(f"Car1's speed: {car1.max_speed}")
-# MANGLING next
-print(f'car1 max_speed private: {car1._Car__max_speed}')   # such codes only for testing! without getter/setter
+if __name__ ==  '__main__':
+   car1 = Car('black', 'lixiang')
+   car2 = Car('white', 'ford')
+   print(car1.color, car1.model)
+   car1.drive_to('Kant')
+   print('Fined:', 'yes' if car1._fined else 'no')
+   car1._calculated_fuel()
+   car1.__max_speed = 294    # non-existent attribute. It may be similar to the one in Car (illusion)
+   # print(car2.__max_speed)
+   print(f"Car1's speed: {car1.get_max_speed()}")
+   car1.set_max_speed(79)
+   print(f"Car1's speed: {car1.get_max_speed()}")
+   print(f"Car1's speed: {car1.max_speed}")     # was called with @property
+   car1.max_speed = 365
+   print(f"Car1's speed: {car1.max_speed}")
+   # MANGLING next
+   print(f'car1 max_speed private: {car1._Car__max_speed}')   # such codes only for testing! without getter/setter
